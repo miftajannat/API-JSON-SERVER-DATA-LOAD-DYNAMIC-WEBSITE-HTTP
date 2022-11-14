@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>JSON</h1>
+        <h2>JavaScript Object Notation</h2>
+        <script>
+            const user = {
+                id: 222,
+                name: "Buffy",
+                profile: {
+                    age: 30,
+                    job: "banker",
+                    hobbies: ["reading", "cooking", "dancing"]
+                },
+                friendsAge: [22, 33, 44, 55],
+                friends: [
+                    { id: 111, name: "Willow" },
+                    { id: 333, name: "Alex" },
+                    { id: 444, name: "Angel" }
+                ],
+            };
+            const userJSON = JSON.stringify(user);
+            console.log(userJSON);
+            //{"id":222,"name":"Buffy","profile":{"age":30,"job":"banker","hobbies":["reading","cooking","dancing"]},"friendsAge":[22,33,44,55],"friends":[{"id":111,"name":"Willow"},{"id":333,"name":"Alex"},{"id":444,"name":"Angel"}]}
+
+            const userFromJSON = JSON.parse(userJSON);
+            console.log(userFromJSON);
+            // {id: 222, name: "Buffy", profile: {…}, friendsAge: Array(4), friends: Array(3)}
+            //Object { id: 222, name: "Buffy" }
+            //id: 222
+            //name: "Buffy"
+
+
+
+        </script>
+    </body>
+
+</html>
